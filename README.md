@@ -9,6 +9,32 @@ Before running the project, install the required dependencies listed in `require
 pip install -r requirements_rtx30.txt
 ```
 
+## Input Requirements
+
+The code expects a raw, unprocessed `.xlsx` file as input for both training and prediction tasks. File processing and necessary transformations for the model are handled internally by the code.
+
+### Required Columns in the .xlsx File
+
+- **Text Column**: The `.xlsx` file must include a column as specified by `text_column` in `config.py`, which contains the text data.
+
+### Output Columns Generated During Prediction
+
+During prediction, the identified aspects will be stored in the following columns:
+- **Named Entity**: The column specified by `NE_column` will contain the named entities extracted from the text.
+- **Named Entity Type**: The column specified by `NE_type_column` will contain the type of each named entity.
+- **Sentiment Prediction**: The column specified by `predictions_column` will contain the sentiment prediction results.
+
+### Output Format
+
+The output is organized in a sentence + named entity pair format. Each row will contain:
+- The sentence text
+- The named entity and its type
+- The sentiment prediction value
+
+This format enables easy analysis by linking each entity with its corresponding sentiment and context within the sentence.
+
+
+
 ## Currently Used Python Files
 
 ### Prediction
