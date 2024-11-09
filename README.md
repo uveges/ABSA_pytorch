@@ -7,6 +7,7 @@ This project implements aspect-based sentiment analysis using BERT models in a P
 Before running the project, install the required dependencies listed in `requirements_rtx30.txt`:
 ```bash
 pip install -r requirements_rtx30.txt
+```
 
 ## Currently Used Python Files
 
